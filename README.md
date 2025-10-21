@@ -7,7 +7,7 @@ It automatically builds a Docker image, pushes it to **AWS ECR**, and deploys it
 ## 🐍 Flask App
 A simple web app that returns a welcome message.
 
-#🐳 Docker
+# 🐳 Docker
 Build locally:
 ```
 docker build -t aws-cicd-demo .
@@ -27,7 +27,7 @@ terraform plan
 terraform apply
 ```
 
-#🔄 GitHub Actions (CI/CD)
+# 🔄 GitHub Actions (CI/CD)
 
 The workflow:
  * Builds and tests the app
@@ -39,7 +39,7 @@ Secrets required (for real AWS use):
  * AWS_ACCESS_KEY_ID
  * AWS_SECRET_ACCESS_KEY
 
-#🌍 Local Simulation
+# 🌍 Local Simulation
 You can simulate the deployment locally using Minikube instead of AWS:
 ```
 minikube start
