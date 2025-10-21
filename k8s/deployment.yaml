@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aws-cicd-demo
+  labels:
+    app: aws-cicd-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aws-cicd-demo
+  template:
+    metadata:
+      labels:
+        app: aws-cicd-demo
+    spec:
+      containers:
+        - name: aws-cicd-demo
+          image: 123456789012.dkr.ecr.us-east-1.amazonaws.com/aws-cicd-demo:latest
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: Always
+
+
